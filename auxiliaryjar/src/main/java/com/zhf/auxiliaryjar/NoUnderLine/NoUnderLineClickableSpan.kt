@@ -18,7 +18,7 @@ class NoUnderLineClickableSpan(
     private var i_ClickableSpan = context as I_ClickableSpan
 
     override fun onClick(widget: View) {
-        if (pairEntity == null || pairEntity.clickType == "" || pairEntity.clickType == null) return
+        if (pairEntity.clickType == "") return
         i_ClickableSpan.OnSpanClick(pairEntity)
     }
 

@@ -1,15 +1,9 @@
 apply plugin: 'com.android.library'
-
-//apply plugin: 'kotlin-android'
-////集成 Dagger2 所需
-//apply plugin: 'kotlin-kapt'
-//apply plugin: 'kotlin-android-extensions'
-
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 apply plugin: 'com.github.dcendents.android-maven'
-group = 'com.github.trevonnling'
+group = 'com.github.FMJZHF'
 android {
     compileSdkVersion 28
 
