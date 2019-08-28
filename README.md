@@ -19,7 +19,7 @@ allprojects {
 ### Step 2. Add the dependency
 ```
 dependencies {
-    implementation 'com.github.FMJZHF:Auxiliary:v1.0'
+    implementation 'com.github.FMJZHF:Auxiliary:版本号'
 }
 ```
 ## 1.实现TextView部分文字的点击事件
@@ -97,4 +97,49 @@ class NoUnderLineTextActivity : AppCompatActivity(), I_ClickableSpan {
     }
 }
 ```
-## 2.时间操作类 DateTime
+## 2.Android 选择器
+### 先看效果图
+![Android 选择器效果图](https://github.com/FMJZHF/Auxiliary/blob/master/img_folder/wheelpicker.png)
+
+### 使用方法
+#### 自定义属性
+```
+xmlns:app="http://schemas.android.com/apk/res-auto"
+	
+app:canLoop="true"    <!-- 是否循环滚动 -->
+app:centerTextColor="#404040"   <!-- 选择字体的颜色 -->
+app:drawItemCount="7"  <!-- 总展示数量(包含分割线) -->
+app:initPosition="3"  <!-- 初识显示数量 -->
+app:lineColor="#999999"  <!-- 分割线的颜色 -->
+app:textSize="18sp"   <!-- 字体大小 -->
+app:topBottomTextColor="#cccccc"    <!-- 上下文字的颜色 -->
+```
+#### 具体使用方法
+```
+wheelPickerYear.setDataList(mYearList)
+wheelPickerYear.setInitPosition(yearPos) // 默认选中的年份
+//年份滚动选择
+wheelPickerYear.setLoopListener(object : WheelPickerScrollListener {
+    override fun onItemSelect(item: Int) {
+        yearPos = item
+        Log.e("选择的年：", mYearList[item])
+        titleView.text = mYearList[yearPos] + "-" + mMonthList[monthPos] + "-" + mDayList[dayPos]
+    }
+})	
+```
+## 3.时间操作类 [DateTime](https://github.com/FMJZHF/Auxiliary/blob/master/auxiliaryjar/src/main/java/com/zhf/auxiliaryjar/date/DateTime.kt)
+## 4.SharedPreferences存放数据操作类 [SharedPreferencesUtil](https://github.com/FMJZHF/Auxiliary/blob/master/auxiliaryjar/src/main/java/com/zhf/auxiliaryjar/sharedPreferences/SharedPreferencesUtil.kt)
+## 5.获取本机手机号码及运营商 [SIMCardInfoUtil](https://github.com/FMJZHF/Auxiliary/blob/master/auxiliaryjar/src/main/java/com/zhf/auxiliaryjar/simCard/SIMCardInfoUtil.kt)
+```
+<!-- 获取手机号码 -->
+SIMCardInfoUtil(this).getPhoneLocalEncry(true)
+<!-- 获取运营商 -->
+SIMCardInfoUtil(this).providersName
+```
+## 6.操作状态栏 [StatusBarNavigationBarUtil](https://github.com/FMJZHF/Auxiliary/blob/master/auxiliaryjar/src/main/java/com/zhf/auxiliaryjar/statusBar/StatusBarNavigationBarUtil.kt)
+```
+在Activity or Fragment onCreate 方法中进行调用
+// 默认状态栏字体为白色
+StatusBarNavigationBarUtil.immersiveStatusBarNavigationBar(this, statusBar = true, navigationBar = true)
+StatusBarNavigationBarUtil.setLightStatusBar(this, false)
+```
