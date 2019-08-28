@@ -4,6 +4,7 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.zhf.auxiliary.demo.NoUnderLineTextActivity
+import com.zhf.auxiliary.util.DialogUtil
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -16,6 +17,17 @@ class MainActivity : AppCompatActivity() {
         noUnderLineTextBtn.setOnClickListener {
             startActivity(Intent(this, NoUnderLineTextActivity::class.java))
         }
+
+        // 时间选择框
+        wheelPickerBtn.setOnClickListener {
+
+            DialogUtil.showDialog(this@MainActivity)
+
+        }
+
+
+
+
 
 
     }

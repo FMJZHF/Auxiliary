@@ -49,14 +49,11 @@ class NoUnderLineTextActivity : AppCompatActivity(), I_ClickableSpan {
     override fun OnSpanClick(pairEntity: PairEntity) {
 
         var type = pairEntity.clickType
-        if (type == "1") {
-            showHint("点击了："+pairEntity.clickText)
-        } else if (type == "2") {
-            showHint("点击了："+pairEntity.clickText)
-        } else if (type == "3") {
-            showHint("点击了："+pairEntity.clickText)
-        } else {
-            showHint("未设置点击事件")
+        when (type) {
+            "1" -> showHint("点击了："+pairEntity.clickText)
+            "2" -> showHint("点击了："+pairEntity.clickText)
+            "3" -> showHint("点击了："+pairEntity.clickText)
+            else -> showHint("未设置点击事件")
         }
 
     }

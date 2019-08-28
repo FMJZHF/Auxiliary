@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="#FFFFFF"
+	android:orientation="vertical">
+	
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+		
+		<TextView
+			android:id="@+id/button_cancel"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:background="@drawable/dialog_button_selector"
+			android:gravity="center"
+			android:padding="15dp"
+			android:text="取消"
+			android:textColor="#000000"
+			android:textSize="15sp" />
+		
+		<TextView
+			android:id="@+id/title"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:text="title"
+			android:textColor="@color/dialogTitle"
+			android:textSize="17sp"
+			android:textStyle="bold" />
+		
+		<TextView
+			android:id="@+id/button_confirm"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:background="@drawable/dialog_button_selector"
+			android:gravity="center"
+			android:padding="15dp"
+			android:text="确定"
+			android:textColor="#000000"
+			android:textSize="15sp" />
+	
+	</LinearLayout>
+	
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="1px"
+		android:background="#11000000" />
+	
+	
+	<LinearLayout
+		android:id="@+id/content"
+		android:layout_width="match_parent"
+		android:layout_height="208dp"
+		android:orientation="horizontal"
+		android:padding="20dp">
+		
+		<com.zhf.auxiliaryjar.picker.WheelPickerView
+			android:id="@+id/wheelPickerYear"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			app:canLoop="false"
+			app:centerTextColor="#404040"
+			app:drawItemCount="5"
+			app:initPosition="3"
+			app:lineColor="#999999"
+			app:textSize="18sp"
+			app:topBottomTextColor="#cccccc" />
+		
+		<com.zhf.auxiliaryjar.picker.WheelPickerView
+			android:id="@+id/wheelPickerMonth"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			app:canLoop="true"
+			app:centerTextColor="#404040"
+			app:drawItemCount="7"
+			app:initPosition="3"
+			app:lineColor="#999999"
+			app:textSize="18sp"
+			app:topBottomTextColor="#cccccc" />
+		
+		<com.zhf.auxiliaryjar.picker.WheelPickerView
+			android:id="@+id/wheelPickerDay"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			app:canLoop="true"
+			app:centerTextColor="#404040"
+			app:drawItemCount="7"
+			app:initPosition="3"
+			app:lineColor="#999999"
+			app:textSize="18sp"
+			app:topBottomTextColor="#00ddbb" />
+	
+	</LinearLayout>
+
+</LinearLayout>
