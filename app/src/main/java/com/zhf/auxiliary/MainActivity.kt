@@ -3,7 +3,8 @@ package com.zhf.auxiliary
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import com.zhf.auxiliary.demo.NoUnderLineTextActivity
+import com.zhf.auxiliary.demo.*
+import com.zhf.auxiliary.suctiontop.SuctionTopActivity
 import com.zhf.auxiliary.util.DialogUtil
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -20,15 +21,14 @@ class MainActivity : AppCompatActivity() {
 
         // 时间选择框
         wheelPickerBtn.setOnClickListener {
-
             DialogUtil.showDialog(this@MainActivity)
-
         }
 
-
-
-
-
+        // 吸顶效果
+        suctionTopScrollBtn.setOnClickListener {
+            startActivity(Intent(this, SuctionTopActivity::class.java))
+        }
+        
 
     }
 }
