@@ -143,3 +143,23 @@ SIMCardInfoUtil(this).providersName
 StatusBarNavigationBarUtil.immersiveStatusBarNavigationBar(this, statusBar = true, navigationBar = true)
 StatusBarNavigationBarUtil.setLightStatusBar(this, false)
 ```
+## 7.RecyclerView操作类
+####  适配器[RecyclerBaseAdapter](https://github.com/FMJZHF/Auxiliary/blob/master/auxiliaryjar/src/main/java/com/zhf/auxiliaryjar/recyclerview_adapter/RecyclerBaseAdapter.kt)
+```
+class NewsAdapter(context: Context, datas: MutableList<TestBean>) :RecyclerBaseAdapter<TestBean>(context, R.layout.item_layout, datas){
+          override fun convert(holder: RecyclerBaseHolder, item: TestBean, position: Int) {
+                val tv = holder.getView<TextView>(R.id.tv)
+                      tv.text = item.name
+                 val image = holder.getView<ImageView>(R.id.image)
+                      image.setOnClickListener{
+                           // 点击事件
+                      }
+           }
+ }
+```
+#### 分割线 [DividerItemDecoration](https://github.com/FMJZHF/Auxiliary/blob/master/auxiliaryjar/src/main/java/com/zhf/auxiliaryjar/recyclerview_adapter/DividerItemDecoration.kt)
+``` 
+// 动态添加分割线
+val itemDecoration = DividerItemDecoration( context!!, LinearLayoutManager.VERTICAL )
+mRecyclerView!!.addItemDecoration(itemDecoration)
+```
