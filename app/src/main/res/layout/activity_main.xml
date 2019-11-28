@@ -31,6 +31,13 @@
                 android:layout_height="wrap_content"
                 android:text="吸顶效果"/>
 
+        <TextView
+                android:id="@+id/selectCityBtn"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:text="选择城市"/>
+
     </LinearLayout>
 
 </ScrollView>

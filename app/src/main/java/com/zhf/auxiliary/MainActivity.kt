@@ -3,6 +3,7 @@ package com.zhf.auxiliary
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.zhf.auxiliary.city.CityActivity
 import com.zhf.auxiliary.demo.*
 import com.zhf.auxiliary.suctiontop.SuctionTopActivity
 import com.zhf.auxiliary.util.DialogUtil
@@ -28,7 +29,12 @@ class MainActivity : AppCompatActivity() {
         suctionTopScrollBtn.setOnClickListener {
             startActivity(Intent(this, SuctionTopActivity::class.java))
         }
-        
+
+        // 选择城市
+        selectCityBtn.setOnClickListener {
+            startActivity(Intent(this, CityActivity::class.java))
+        }
+
 
     }
 }
