@@ -164,7 +164,9 @@ val itemDecoration = DividerItemDecoration( context!!, LinearLayoutManager.VERTI
 mRecyclerView!!.addItemDecoration(itemDecoration)
 ```
 
-## 8.自定义输入金额框[MoneyEditText](https://github.com/FMJZHF/Auxiliary/blob/master/auxiliaryjar/src/main/java/com/zhf/auxiliaryjar/edittext/MoneyEditText.kt)
+## 8.选择城市[CityActivity](https://github.com/FMJZHF/Auxiliary/blob/master/app/src/main/java/com/zhf/auxiliary/city/CityActivity.kt)
+###![效果图](https://raw.githubusercontent.com/FMJZHF/Auxiliary/master/img_folder/city.jpg)
+## 9.自定义输入金额框[MoneyEditText](https://github.com/FMJZHF/Auxiliary/blob/master/auxiliaryjar/src/main/java/com/zhf/auxiliaryjar/edittext/MoneyEditText.kt)
 ```
     <com.zhf.auxiliaryjar.edittext.MoneyEditText
         android:id="@+id/et_at_trad_money"
@@ -186,7 +188,7 @@ var etTradMoney:MoneyEditText
 etTradMoney.setFilters(new InputFilter[]{new InputFilter.LengthFilter(12)})
 ```
 
-## 9.自定义验证码输入框[VerificationCodeView](https://github.com/FMJZHF/Auxiliary/blob/master/auxiliaryjar/src/main/java/com/zhf/auxiliaryjar/verification_code/VerificationCodeView.kt)
+## 10.自定义验证码输入框[VerificationCodeView](https://github.com/FMJZHF/Auxiliary/blob/master/auxiliaryjar/src/main/java/com/zhf/auxiliaryjar/verification_code/VerificationCodeView.kt)
 ```
   <com.zhf.auxiliaryjar.verification_code.VerificationCodeView
 	xmlns:app="http://schemas.android.com/apk/res-auto"
