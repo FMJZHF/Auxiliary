@@ -166,6 +166,20 @@ mRecyclerView!!.addItemDecoration(itemDecoration)
 
 ## 8.自定义输入金额框[MoneyEditText](https://github.com/FMJZHF/Auxiliary/blob/master/auxiliaryjar/src/main/java/com/zhf/auxiliaryjar/edittext/MoneyEditText.kt)
 ```
+    <com.zhf.auxiliaryjar.edittext.MoneyEditText
+        android:id="@+id/et_at_trad_money"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center_vertical"
+        android:background="#33000000"
+        android:hint="输入金额的输入框"
+        android:inputType="number"
+        android:maxLength="12"
+        android:padding="5dp"
+        android:textColor="#000000"
+        android:textCursorDrawable="@null"
+        android:textSize="16sp" />
+
 【注意】在布局文件中设置 maxLength=12，是不能限制输入字符的最大长度，需要在代码中设置
 var etTradMoney:MoneyEditText
 //即限定最大输入字符数为12
@@ -174,21 +188,30 @@ etTradMoney.setFilters(new InputFilter[]{new InputFilter.LengthFilter(12)})
 
 ## 9.自定义验证码输入框[VerificationCodeView](https://github.com/FMJZHF/Auxiliary/blob/master/auxiliaryjar/src/main/java/com/zhf/auxiliaryjar/verification_code/VerificationCodeView.kt)
 ```
- 使用方法：
- xmlns:app="http://schemas.android.com/apk/res-auto"
-
- <!--输入框文字大小-->
- app:vcv_code_size="12sp"
- <!--输入框获取焦点时边框-->
- app:vcv_code_bg_focus="@drawable/bg_text_focused"
- <!--输入框没有焦点时边框-->
- app:vcv_code_bg_normal="@drawable/bg_text_normal"
- <!--输入框文字颜色-->
- app:vcv_code_color="@color/text_border_focused"
- <!--输入框的数量 默认为6-->
- app:vcv_code_number="4"
- <!--单个验证码的宽度-->
- app:vcv_code_width="50dp"
- <!--是否展示密码样式，默认false-->
-  app:vcv_code_input_style="true"
+  <com.zhf.auxiliaryjar.verification_code.VerificationCodeView
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/view_verification"
+	android:layout_width="match_parent"
+	android:layout_marginLeft="35dp"
+	android:layout_marginRight="35dp"
+	android:layout_height="wrap_content"
+	android:layout_marginTop="20dp"
+	app:vcv_code_width="50dp"
+	 app:vcv_code_input_style="true"
+	app:vcv_code_size="12sp"/>
+		
 ```
+
+### 使用方法
+```
+添加 ： xmlns:app="http://schemas.android.com/apk/res-auto"	
+```
+属性  | 值  | 含义 
+------------- | ------------- | -------------
+vcv_code_size  | 12sp | 输入框文字大小
+vcv_code_bg_focus  | @drawable/bg_text_focused | 输入框获取焦点时边框 
+vcv_code_bg_normal  | @drawable/bg_text_normal | 输入框没有焦点时边框 
+vcv_code_color | @color/text_color  | 输入框文字颜色 
+vcv_code_number | 4  | 输入框的数量 默认为6 
+vcv_code_width | 50dp  | 单个验证码的宽度，默认40dp 
+vcv_code_input_style  | true | 是否展示密码样式，默认false
