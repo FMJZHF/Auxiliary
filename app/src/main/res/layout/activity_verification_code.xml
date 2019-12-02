@@ -16,20 +16,7 @@
 		android:layout_marginRight="35dp"
 		android:layout_height="wrap_content"
 		android:layout_marginTop="20dp"
-		app:vcv_code_size="12sp"
-		app:vcv_code_bg_focus="@drawable/bg_text_focused"
-		app:vcv_code_bg_normal="@drawable/bg_text_normal"
-		app:vcv_code_color="@color/text_border_focused"
-		app:vcv_code_number="4"
-		app:vcv_code_width="50dp"
-		app:vcv_code_input_style="true"
-		
-		/>
-	
-	
-	<!--app:vcv_code_bg_focus="@drawable/bg_text_focused"-->
-	<!--app:vcv_code_bg_normal="@drawable/bg_text_normal"-->
-	<!--app:vcv_code_color="@color/text_border_focused"-->
+		app:vcv_code_size="12sp"/>
 	
 	<Button
 		android:id="@+id/btn_submit"

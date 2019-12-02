@@ -18,12 +18,12 @@ class VerificationCodeActivity : AppCompatActivity(), View.OnClickListener {
 		viewVerification = findViewById(R.id.view_verification)
 		btnSubmit = findViewById(R.id.btn_submit)
 		btnClear = findViewById(R.id.btn_clear)
-
+		
 		btnSubmit!!.setOnClickListener(this)
 		btnClear!!.setOnClickListener(this)
 	}
-
-
+	
+	
 	override fun onClick(v: View) {
 		when (v.id) {
 			R.id.btn_submit -> if (viewVerification!!.isFinish) {
