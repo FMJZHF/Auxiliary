@@ -8,7 +8,9 @@ import android.widget.Toast
 import com.zhf.auxiliary.R
 import com.zhf.auxiliaryjar.verification_code.VerificationCodeView
 
-class VerificationCodeActivity : AppCompatActivity(), View.OnClickListener {
+class VerificationCodeActivity : AppCompatActivity(), View.OnClickListener, VerificationCodeView.I_inputOver {
+
+
 	private var viewVerification: VerificationCodeView? = null
 	private var btnSubmit: Button? = null
 	private var btnClear: Button? = null
@@ -16,6 +18,7 @@ class VerificationCodeActivity : AppCompatActivity(), View.OnClickListener {
 		super.onCreate(savedInstanceState)
 		setContentView(R.layout.activity_verification_code)
 		viewVerification = findViewById(R.id.view_verification)
+		viewVerification!!.setInputOver(this)
 		btnSubmit = findViewById(R.id.btn_submit)
 		btnClear = findViewById(R.id.btn_clear)
 		
@@ -27,11 +30,16 @@ class VerificationCodeActivity : AppCompatActivity(), View.OnClickListener {
 	override fun onClick(v: View) {
 		when (v.id) {
 			R.id.btn_submit -> if (viewVerification!!.isFinish) {
-				Toast.makeText(this, "输入验证码是:" + viewVerification!!.content, Toast.LENGTH_SHORT).show()
+				Toast.makeText(this, "输入验证码是:" + viewVerification!!.getContent, Toast.LENGTH_SHORT).show()
 			} else {
 				Toast.makeText(this, "请输入完整验证码", Toast.LENGTH_SHORT).show()
 			}
 			R.id.btn_clear -> viewVerification!!.clear()
 		}
+	}
+
+
+	override fun inputCodeOver(code: String) {
+		Toast.makeText(this, "输入验证码是:$code" , Toast.LENGTH_SHORT).show()
 	}
 }

@@ -70,13 +70,15 @@ class VerificationCodeView @JvmOverloads constructor(context: Context, attrs: At
 	
 	//当前选中的TextView位置，即光标所在位置
 	private var currentFocusPosition = 0
-	
+
+	private lateinit var inputOver: I_inputOver
+
 	/**
 	 * 获取输入的验证码
 	 *
 	 * @return
 	 */
-	val content: String
+	val getContent: String
 		get() {
 			val builder = StringBuilder()
 			for (tv in textViews!!) {
@@ -99,7 +101,12 @@ class VerificationCodeView @JvmOverloads constructor(context: Context, attrs: At
 			}
 			return true
 		}
-	
+
+
+	fun setInputOver(inputOver: I_inputOver) {
+		this.inputOver = inputOver
+	}
+
 	init {
 		init(context, attrs, defStyleAttr)
 	}
@@ -186,6 +193,10 @@ class VerificationCodeView @JvmOverloads constructor(context: Context, attrs: At
 				if (!TextUtils.isEmpty(content)) {
 					if (content.length == 1) {
 						setText(content)
+					}
+					if (currentFocusPosition == textViews!!.size) {
+						// 输入完成
+						inputOver.inputCodeOver(getContent)
 					}
 					editText!!.setText("")
 				}
@@ -332,5 +343,10 @@ class VerificationCodeView @JvmOverloads constructor(context: Context, attrs: At
 		}
 		currentFocusPosition = 0
 		resetCursorPosition()
+	}
+
+	// 输入结束后的监听
+	interface I_inputOver {
+		fun inputCodeOver(code: String)
 	}
 }

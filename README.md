@@ -206,6 +206,11 @@ etTradMoney.setFilters(new InputFilter[]{new InputFilter.LengthFilter(12)})
 
 ### 使用方法
 ```
+输入完成后自动获取结果方法：
+    viewVerification!!.setInputOver(this)
+    
+    实现 VerificationCodeView.I_inputOver 接口 ，调用 inputCodeOver(code: String) 方法
+
 添加 ： xmlns:app="http://schemas.android.com/apk/res-auto"	
 ```
 属性  | 值  | 含义 
@@ -217,3 +222,4 @@ vcv_code_color | @color/text_color  | 输入框文字颜色
 vcv_code_number | 4  | 输入框的数量 默认为6 
 vcv_code_width | 50dp  | 单个验证码的宽度，默认40dp 
 vcv_code_input_style  | true | 是否展示密码样式，默认false
+
