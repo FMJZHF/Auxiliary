@@ -3,6 +3,7 @@ package com.zhf.auxiliary
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.zhf.auxiliary.activity.*
 import com.zhf.auxiliary.city.CityActivity
 import com.zhf.auxiliary.demo.*
 import com.zhf.auxiliary.suctiontop.SuctionTopActivity
@@ -33,6 +34,11 @@ class MainActivity : AppCompatActivity() {
         // 选择城市
         selectCityBtn.setOnClickListener {
             startActivity(Intent(this, CityActivity::class.java))
+        }
+
+        // 验证码输入框
+        verificationCodeBtn.setOnClickListener {
+            startActivity(Intent(this, VerificationCodeActivity::class.java))
         }
 
 

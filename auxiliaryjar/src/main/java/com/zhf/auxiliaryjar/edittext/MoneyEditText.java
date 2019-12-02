@@ -1,12 +1,12 @@
 package com.zhf.auxiliaryjar.edittext;
 
 import android.content.Context;
+import android.support.v7.widget.AppCompatEditText;
 import android.text.Editable;
 import android.text.InputType;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
-import android.widget.EditText;
 
 /**
  *
@@ -17,7 +17,7 @@ import android.widget.EditText;
  * etTradMoney.setFilters(new InputFilter[]{new InputFilter.LengthFilter(12)});
  */
 
-public class MoneyEditText extends EditText {
+public class MoneyEditText extends AppCompatEditText {
     private static final String TAG = "MoneyEditText";
     private boolean textChange;
 

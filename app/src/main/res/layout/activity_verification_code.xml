@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@android:color/white"
+	android:gravity="center_horizontal"
+	android:orientation="vertical"
+	tools:context=".MainActivity">
+	
+	<com.zhf.auxiliaryjar.verification_code.VerificationCodeView
+		android:id="@+id/view_verification"
+		android:layout_width="match_parent"
+		android:layout_marginLeft="35dp"
+		android:layout_marginRight="35dp"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20dp"
+		app:vcv_code_size="12sp"
+		app:vcv_code_bg_focus="@drawable/bg_text_focused"
+		app:vcv_code_bg_normal="@drawable/bg_text_normal"
+		app:vcv_code_color="@color/text_border_focused"
+		app:vcv_code_number="4"
+		app:vcv_code_width="50dp"
+		app:vcv_code_input_style="true"
+		
+		/>
+	
+	
+	<!--app:vcv_code_bg_focus="@drawable/bg_text_focused"-->
+	<!--app:vcv_code_bg_normal="@drawable/bg_text_normal"-->
+	<!--app:vcv_code_color="@color/text_border_focused"-->
+	
+	<Button
+		android:id="@+id/btn_submit"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="10dp"
+		android:text="提交" />
+	
+	<Button
+		android:id="@+id/btn_clear"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="10dp"
+		android:text="清空" />
+</LinearLayout>
