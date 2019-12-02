@@ -163,3 +163,32 @@ class NewsAdapter(context: Context, datas: MutableList<TestBean>) :RecyclerBaseA
 val itemDecoration = DividerItemDecoration( context!!, LinearLayoutManager.VERTICAL )
 mRecyclerView!!.addItemDecoration(itemDecoration)
 ```
+
+## 8.自定义输入金额框[MoneyEditText](https://github.com/FMJZHF/Auxiliary/blob/master/auxiliaryjar/src/main/java/com/zhf/auxiliaryjar/edittext/MoneyEditText.kt)
+```
+【注意】在布局文件中设置 maxLength=12，是不能限制输入字符的最大长度，需要在代码中设置
+var etTradMoney:MoneyEditText
+//即限定最大输入字符数为12
+etTradMoney.setFilters(new InputFilter[]{new InputFilter.LengthFilter(12)})
+```
+
+## 9.自定义验证码输入框[VerificationCodeView](https://github.com/FMJZHF/Auxiliary/blob/master/auxiliaryjar/src/main/java/com/zhf/auxiliaryjar/verification_code/VerificationCodeView.kt)
+```
+ 使用方法：
+ xmlns:app="http://schemas.android.com/apk/res-auto"
+
+ <!--输入框文字大小-->
+ app:vcv_code_size="12sp"
+ <!--输入框获取焦点时边框-->
+ app:vcv_code_bg_focus="@drawable/bg_text_focused"
+ <!--输入框没有焦点时边框-->
+ app:vcv_code_bg_normal="@drawable/bg_text_normal"
+ <!--输入框文字颜色-->
+ app:vcv_code_color="@color/text_border_focused"
+ <!--输入框的数量 默认为6-->
+ app:vcv_code_number="4"
+ <!--单个验证码的宽度-->
+ app:vcv_code_width="50dp"
+ <!--是否展示密码样式，默认false-->
+  app:vcv_code_input_style="true"
+```
