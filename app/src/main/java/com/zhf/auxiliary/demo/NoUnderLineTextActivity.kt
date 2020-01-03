@@ -1,11 +1,13 @@
 package com.zhf.auxiliary.demo
 
 import android.graphics.Color
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.zhf.auxiliary.R
-import com.zhf.auxiliaryjar.NoUnderLine.*
+import com.zhf.auxiliaryjar.NoUnderLine.I_ClickableSpan
+import com.zhf.auxiliaryjar.NoUnderLine.NoUnderLineTextUtil
+import com.zhf.auxiliaryjar.NoUnderLine.PairEntity
 import kotlinx.android.synthetic.main.activity_no_under_line_text.*
 
 class NoUnderLineTextActivity : AppCompatActivity(), I_ClickableSpan {

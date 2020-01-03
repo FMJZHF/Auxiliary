@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.Drawable
-import android.support.annotation.DrawableRes
 import android.text.Editable
 import android.text.InputType
 import android.text.TextUtils
@@ -17,6 +16,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.RelativeLayout
 import android.widget.TextView
+import androidx.annotation.DrawableRes
 import com.zhf.auxiliaryjar.R
 
 

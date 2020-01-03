@@ -2,14 +2,12 @@ package com.zhf.auxiliaryjar.picker
 
 import android.annotation.TargetApi
 import android.content.Context
-import android.content.res.TypedArray
 import android.graphics.Canvas
 import android.graphics.Paint
 import android.graphics.Rect
 import android.graphics.Typeface
 import android.os.Build
 import android.os.Handler
-import android.os.Message
 import android.util.AttributeSet
 import android.view.GestureDetector
 import android.view.MotionEvent
@@ -18,7 +16,6 @@ import com.zhf.auxiliaryjar.R
 
 import java.util.ArrayList
 import java.util.concurrent.Executors
-import java.util.concurrent.ScheduledExecutorService
 import java.util.concurrent.ScheduledFuture
 import java.util.concurrent.TimeUnit
 
@@ -238,7 +235,7 @@ class WheelPickerView : View {
                     templateItem = templateItem + mDataList!!.size
                 }
                 if (templateItem > mDataList!!.size - 1) {
-                    templateItem = templateItem - mDataList!!.size
+                    templateItem -= mDataList!!.size
                 }
                 itemCount[count] = mDataList!![templateItem] as String
             } else if (templateItem < 0) {
@@ -289,7 +286,7 @@ class WheelPickerView : View {
                     canvas.save()
                     canvas.clipRect(0, 0, mWidgetWidth, mTopLineY - translateY)
                     canvas.drawText(
-                        itemCount[count],
+                        itemCount[count]!!,
                         mPaddingLeftRight.toFloat(),
                         mMaxTextHeight.toFloat(),
                         mTopBottomTextPaint!!
@@ -298,7 +295,7 @@ class WheelPickerView : View {
                     canvas.save()
                     canvas.clipRect(0, mTopLineY - translateY, mWidgetWidth, itemHeight.toInt())
                     canvas.drawText(
-                        itemCount[count],
+                        itemCount[count]!!,
                         mPaddingLeftRight.toFloat(),
                         mMaxTextHeight.toFloat(),
                         mCenterTextPaint!!
@@ -309,7 +306,7 @@ class WheelPickerView : View {
                     canvas.save()
                     canvas.clipRect(0, 0, mWidgetWidth, mBottomLineY - translateY)
                     canvas.drawText(
-                        itemCount[count],
+                        itemCount[count]!!,
                         mPaddingLeftRight.toFloat(),
                         mMaxTextHeight.toFloat(),
                         mCenterTextPaint!!
@@ -318,7 +315,7 @@ class WheelPickerView : View {
                     canvas.save()
                     canvas.clipRect(0, mBottomLineY - translateY, mWidgetWidth, itemHeight.toInt())
                     canvas.drawText(
-                        itemCount[count],
+                        itemCount[count]!!,
                         mPaddingLeftRight.toFloat(),
                         mMaxTextHeight.toFloat(),
                         mTopBottomTextPaint!!
@@ -328,7 +325,7 @@ class WheelPickerView : View {
                     //draw center complete text
                     canvas.clipRect(0, 0, mWidgetWidth, itemHeight.toInt())
                     canvas.drawText(
-                        itemCount[count],
+                        itemCount[count]!!,
                         mPaddingLeftRight.toFloat(),
                         mMaxTextHeight.toFloat(),
                         mCenterTextPaint!!

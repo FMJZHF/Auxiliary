@@ -3,11 +3,11 @@ package com.zhf.auxiliary.suctiontop.indicator
 import android.content.Context
 import android.graphics.Color
 import android.os.Build
-import android.support.annotation.RequiresApi
-import android.support.v4.view.ViewPager
 import android.view.View
 import android.view.animation.AccelerateInterpolator
 import android.view.animation.DecelerateInterpolator
+import androidx.annotation.RequiresApi
+import androidx.viewpager.widget.ViewPager
 
 import com.zhf.auxiliary.R
 
@@ -28,10 +28,10 @@ import java.util.ArrayList
 object TabLayouUtil {
 	
 	fun initMagicIndicator(
-			context: Context,
-			magicIndicator: MagicIndicator,
-			mainPager: ViewPager,
-			mDataList: ArrayList<String>?
+		context: Context,
+		magicIndicator: MagicIndicator,
+		mainPager: ViewPager,
+		mDataList: ArrayList<String>?
 	) {
 		// 设置切换 tab 的背景色
 		//magicIndicator.setBackgroundColor(context.getResources().getColor(R.color.white));

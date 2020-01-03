@@ -1,14 +1,14 @@
 package com.zhf.auxiliary.suctiontop
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import com.zhf.auxiliary.R
 import com.zhf.auxiliary.suctiontop.adapter.BaseFragmentPagerAdapter
 import com.zhf.auxiliary.suctiontop.fragment.SuctionTopFragment
 import com.zhf.auxiliary.suctiontop.indicator.TabLayouUtil
 import kotlinx.android.synthetic.main.activity_suction_top.*
-import java.util.ArrayList
+import java.util.*
 
 /**
  * 吸顶效果

@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
 import com.zhf.auxiliary.R
-import com.zhf.auxiliary.city.CityActivity
 import com.zhf.auxiliary.city.model.CityEntity
 
 /**

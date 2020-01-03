@@ -1,1 +1,1 @@
-include ':app', ':auxiliaryjar'
+include ':app', ':auxiliaryjar', ':magicindicator'

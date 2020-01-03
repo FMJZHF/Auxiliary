@@ -7,8 +7,6 @@ import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.os.IBinder
-import android.support.v7.app.AlertDialog
-import android.support.v7.app.AppCompatActivity
 import android.text.Editable
 import android.text.TextUtils
 import android.text.TextWatcher
@@ -19,8 +17,11 @@ import android.view.WindowManager
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
 import android.widget.*
+import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import com.zhf.auxiliary.R
-import com.zhf.auxiliary.city.adapter.*
+import com.zhf.auxiliary.city.adapter.HotCityListAdapter
+import com.zhf.auxiliary.city.adapter.SearchCityListAdapter
 import com.zhf.auxiliary.city.model.CityEntity
 import com.zhf.auxiliary.city.util.JsonReadUtil
 import com.zhf.auxiliary.city.view.LetterListView

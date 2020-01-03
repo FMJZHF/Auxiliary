@@ -1,7 +1,7 @@
 package com.zhf.auxiliaryjar.recyclerview_adapter
 
-import android.support.v7.widget.RecyclerView
 import android.view.View
+import androidx.recyclerview.widget.RecyclerView
 
 /**
 * RecyclerView adapter父类 继承 RecyclerView.Adapter

@@ -1,10 +1,8 @@
 package com.zhf.auxiliaryjar.recyclerview_adapter
 
-import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentManager
-import android.support.v4.app.FragmentPagerAdapter
-import android.support.v4.app.FragmentStatePagerAdapter
-
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentStatePagerAdapter
 import java.util.ArrayList
 
 /**
@@ -27,7 +25,7 @@ open class ViewPageFragmentBaseAdapter @JvmOverloads constructor(
 
     private var mFragmentList: MutableList<Fragment>? = null
 
-    val isEmpty: Boolean
+    private val isEmpty: Boolean
         get() = mFragmentList == null
 
     init {
@@ -46,9 +44,8 @@ open class ViewPageFragmentBaseAdapter @JvmOverloads constructor(
         mFragmentList!!.add(fragment)
     }
 
-    override fun getItem(position: Int): Fragment? {
-        //        Logger.i("BaseFragmentAdapter position=" +position);
-        return if (isEmpty) null else mFragmentList!![position]
+    override fun getItem(position: Int): Fragment {
+        return  mFragmentList!![position]
     }
 
     override fun getCount(): Int {

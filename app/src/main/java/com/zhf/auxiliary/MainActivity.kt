@@ -1,11 +1,11 @@
 package com.zhf.auxiliary
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import com.zhf.auxiliary.activity.*
+import androidx.appcompat.app.AppCompatActivity
+import com.zhf.auxiliary.activity.VerificationCodeActivity
 import com.zhf.auxiliary.city.CityActivity
-import com.zhf.auxiliary.demo.*
+import com.zhf.auxiliary.demo.NoUnderLineTextActivity
 import com.zhf.auxiliary.suctiontop.SuctionTopActivity
 import com.zhf.auxiliary.util.DialogUtil
 import kotlinx.android.synthetic.main.activity_main.*

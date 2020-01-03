@@ -1,12 +1,12 @@
 package com.zhf.auxiliaryjar.verification_code
 
 import android.content.Context
-import android.support.v7.widget.AppCompatEditText
 import android.util.AttributeSet
 import android.view.KeyEvent
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputConnection
 import android.view.inputmethod.InputConnectionWrapper
+import androidx.appcompat.widget.AppCompatEditText
 
 
 class WiseEditText : AppCompatEditText {
