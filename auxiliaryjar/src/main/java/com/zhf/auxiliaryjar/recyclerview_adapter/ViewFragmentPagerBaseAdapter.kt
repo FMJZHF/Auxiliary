@@ -3,11 +3,11 @@ package com.zhf.auxiliaryjar.recyclerview_adapter
 import android.annotation.SuppressLint
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentStatePagerAdapter
+import androidx.fragment.app.FragmentPagerAdapter
 import java.util.*
 
 /**
- * viewpage 中添加fragment的 adapter  继承 FragmentStatePagerAdapter
+ * viewpage 中添加fragment的 adapter 继承 FragmentPagerAdapter
  * Created by zhf on 2019/8/19 14:32
  *
  * use :
@@ -18,11 +18,11 @@ import java.util.*
  *
  */
 @SuppressLint("WrongConstant")
-open class ViewPageFragmentBaseAdapter @JvmOverloads constructor(
+open class ViewFragmentPagerBaseAdapter @JvmOverloads constructor(
     fm: FragmentManager,
     fragmentList: MutableList<Fragment>? = null,
     private var mTitles: MutableList<String>? = null
-) : FragmentStatePagerAdapter(fm, 0) {
+) : FragmentPagerAdapter(fm,0) {
 
     private var mFragmentList: MutableList<Fragment>? = null
 
