@@ -19,7 +19,7 @@ import java.util.*
 object ViewPageTabLayoutUtil {
 
     /**
-     * 设置 Tab 裙子均分布局
+     * 设置 Tab 均分布局
      * @param context : Context
      * @param viewpager : ViewPager
      * @param mDataList : 菜单List
@@ -69,7 +69,7 @@ object ViewPageTabLayoutUtil {
 
 
     /**
-     * 设置 Tab 裙子均分布局
+     * 设置 Tab 均分布局
      * @param context : Context
      * @param viewpager : ViewPager
      * @param mDataList : 菜单List
