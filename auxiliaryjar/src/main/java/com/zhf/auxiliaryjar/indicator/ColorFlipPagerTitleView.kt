@@ -1,8 +1,7 @@
 package com.zhf.auxiliaryjar.indicator
 
 import android.content.Context
-
-import net.lucode.hackware.magicindicator.buildins.commonnavigator.titles.SimplePagerTitleView
+import com.zhf.auxiliaryjar.indicator.magicindicator.buildins.commonnavigator.titles.SimplePagerTitleView
 
 /**
  * 配合viewpage的指示器帮助类

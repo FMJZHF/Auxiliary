@@ -60,7 +60,7 @@
 
             </com.google.android.material.appbar.CollapsingToolbarLayout>
 
-            <net.lucode.hackware.magicindicator.MagicIndicator
+            <com.zhf.auxiliaryjar.weiget.MagicIndicator
                     android:id="@+id/magicIndicator"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
